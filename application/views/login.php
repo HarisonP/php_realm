@@ -11,8 +11,8 @@
 <div id="container">
 
 	<div id="body">
-		<div id='login_form'>
-		<form>
+		<div>
+		<form id='login_form' method='POST' action=<?php echo '"'.$this->config->item('base_url').'desktop'.'"' ?>>
 			<label>Username</label>
 			<input id='username' type='text'/></br>
 			<label>Password</label>
