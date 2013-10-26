@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding: 47px 0 0 0;
     background: url('../../content/web/panelbar/orgHead.png') transparent no-repeat 0 0;
+    position: absolute;
 }
 #bottom {
     width: 300px;

@@ -1,30 +1,11 @@
 
-        <div id="organizer">
-            <ul id="panelbar">
-            <li class="k-state-active">
-                <span class="k-link k-state-selected">My Teammates</span>
-                <div style="padding: 10px;">
-                    <div class="teamMate">
-                        <img src=".http://static3.businessinsider.com/image/51c3211b69bedd8843000023-480/black-hole.jpg" alt="Andrew Fuller">
-                        <h2>Andrew Fuller</h2>
-                        <p>Team Lead</p>
-                    </div>
-                    <div class="teamMate">
-                        <img src="http://static3.businessinsider.com/image/51c3211b69bedd8843000023-480/black-hole.jpg" alt="Nancy Leverling">
-                        <h2>Nancy Leverling</h2>
-                        <p>Sales Associate</p>
-                    </div>
-                    <div class="teamMate">
-                        <img src="http://static3.businessinsider.com/image/51c3211b69bedd8843000023-480/black-hole.jpg" alt="Robert King">
-                        <h2>Robert King</h2>
-                        <p>Business System Analyst</p>
-                    </div>
-                </div>
-            </li>
+    <div id="organizer" class="draggable">
+        <ul id="panelbar">
+
             <li>
-                Projects
+                Scheduled
                 <ul>
-                    <li>New Business Plan</li>
+                    <li>HI</li>
                     <li>
                         Sales Forecasts
                         <ul>
@@ -51,8 +32,8 @@
             <li disabled="disabled">
                 Communication
             </li>
-        </ul>
-        <div id="bottom"></div>
-    </div>
+    </ul>
+    <div id="bottom"></div>
+</div>
 
         
