@@ -10,6 +10,11 @@
 	
 	<script src=<?php echo'"'.$this->config->item('base_url').'application/resources/js/desktop.js"' ?>></script>
 
+	<link rel="stylesheet" type="text/css" href=<?= '"'.$base_url.'\application\resources\lib\styles\kendo.common.min.css'.'"' ?>>
+	<link rel="stylesheet" type="text/css" href=<?= '"'.$base_url.'\application\resources\lib\styles\kendo.default.min.css'.'"' ?>>
+	<script src=<?= '"'.$base_url.'\application\resources\lib\js\jquery.min.js'.'"' ?>></script>
+	<script src=<?= '"'.$base_url.'\application\resources\lib\js\kendo.web.min.js'.'"' ?>></script>
+
 </head>
 <body>
 		<input type="hidden" id="username" value='<?php echo $_SESSION['username']; ?>' ></input>
