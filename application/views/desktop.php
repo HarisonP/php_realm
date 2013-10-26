@@ -19,11 +19,20 @@
 	<script src=<?= '"'.$base_url.'\application\resources\js\desktop.js'.'"' ?>></script>
 
 </head>
-<body>
-		<!-- input type="hidden" id="username" value='<?php //echo $_SESSION['username']; ?>' ></input -->
+
+<body >
 		<div id="desktop" class="k-content">
 	    	<?= $this->load->view("partials/events"); ?>
+		<div id="desktop">
 			<div class='icon draggable'> </div>
+			<div id="selection_box"></div>
+			<?php
+				$currentTop=10;
+				for($i = 0; $i < 5; $i++) {
+					echo '<div class="icon draggable" style="top:'.$currentTop.'px; left: 10px;"> </div>'; 
+					$currentTop += 70;
+				}
+			?>
 			<div id="startMenu" style='display: none'>
 				<button id="fullscrnBtn" class="menubtn">Toggle Fullscreen</button>
 				<button id="marketBtn" class="menubtn">Market</button>
