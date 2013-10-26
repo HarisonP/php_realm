@@ -1,6 +1,7 @@
 $(document).ready(function(){
-startBtnEvents.init();
-dragging.init();
+	startBtnEvents.init();
+	dragging.init();
+
 });	
 
 	var startBtnEvents = new function() {
@@ -12,7 +13,7 @@ dragging.init();
 			self.close();
 		}
 		self.close = function() {
-			$(desktop).click(function(){
+			$("#desktop").click(function(){
 				if( event.target.id !='startMenu' && event.target.id != 'startBtn' && $(event.target).parent().attr('id') != 'startMenu') {
 					$('#startMenu').fadeOut();
 				}
@@ -30,3 +31,11 @@ dragging.init();
 		}
 
 	}
+
+$(document).ready(function() {
+    $("#panelbar").kendoPanelBar({
+        expandMode: "single"
+    });
+
+    $("#panelbar").children("li").children("span.k-link").css({ "font-size":"14px", "height":"50px", "width":"100%", "display":"inline-block" })
+});

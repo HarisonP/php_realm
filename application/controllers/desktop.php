@@ -19,7 +19,8 @@ class Desktop extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('desktop.php');
+		$data['base_url'] = $this->config->item('base_url');
+		$this->load->view('desktop.php', $data);
 	}
 }
 

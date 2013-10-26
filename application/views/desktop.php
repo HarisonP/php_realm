@@ -2,23 +2,27 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title>r</title>
+
 	<link rel="stylesheet" type="text/css" href=<?php echo '"'.$this->config->item('base_url').'application/resources/css/style.css'.'"' ?>>
+	<link rel="stylesheet" type="text/css" href=<?php echo '"'.$base_url.'application/resources/css/events.css'.'"' ?>>
 	<!-- // <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script> -->
-	<script src=<?php echo'"'.$this->config->item('base_url').'application/resources/js/jquery.js"' ?>></script>
-	<script src=<?php echo'"'.$this->config->item('base_url').'application/resources/js/dragPlugin.js"' ?>></script>
 	
-	<script src=<?php echo'"'.$this->config->item('base_url').'application/resources/js/desktop.js"' ?>></script>
 
 	<link rel="stylesheet" type="text/css" href=<?= '"'.$base_url.'\application\resources\lib\styles\kendo.common.min.css'.'"' ?>>
 	<link rel="stylesheet" type="text/css" href=<?= '"'.$base_url.'\application\resources\lib\styles\kendo.default.min.css'.'"' ?>>
+
 	<script src=<?= '"'.$base_url.'\application\resources\lib\js\jquery.min.js'.'"' ?>></script>
+	<script src=<?= '"'.$base_url.'\application\resources\lib\js\kendo.all.min.js'.'"' ?>></script>
 	<script src=<?= '"'.$base_url.'\application\resources\lib\js\kendo.web.min.js'.'"' ?>></script>
+	<script src=<?= '"'.$base_url.'\application\resources\js\dragPlugin.js'.'"' ?>></script>
+	<script src=<?= '"'.$base_url.'\application\resources\js\desktop.js'.'"' ?>></script>
 
 </head>
 <body>
-		<input type="hidden" id="username" value='<?php echo $_SESSION['username']; ?>' ></input>
-		<div id="desktop">
+		<!-- input type="hidden" id="username" value='<?php //echo $_SESSION['username']; ?>' ></input -->
+		<div id="desktop" class="k-content">
+	    	<?= $this->load->view("partials/events"); ?>
 			<div class='icon draggable'> </div>
 			<div id="startMenu" style='display: none'>
 				<button id="fullscrnBtn" class="menubtn">Toggle Fullscreen</button>
