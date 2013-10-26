@@ -344,3 +344,30 @@ html,body
 	height: 50px;
 	background-color: red;
 }
+
+.ui-draggable-dragging 
+{
+		
+	opacity:0.4;
+	filter:alpha(opacity=40);	
+}
+#selection_box
+{
+ 	display: none;
+    position: absolute;
+    border: 1px solid #1919FF ;
+/*    background: transparent;*/
+    background-color: #41b3ab;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    -moz-opacity: 0.35;
+    -khtml-opacity: 0.35;
+    opacity: 0.35;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=35);
+}
+
+.selected
+{
+	background-color: yellow;
+}
