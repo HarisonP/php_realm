@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Desktop extends CI_Controller {
+class Save_icon_positions extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,10 +19,7 @@ class Desktop extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->model('TakePositions');
-		$this->getIconPositions();
-		$data['base_url']=$this->config->item('base_url');
-		$this->load->view('desktop.php',$data);
+		echo 'fua';
 	}
 }
 
