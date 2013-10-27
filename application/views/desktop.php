@@ -20,25 +20,75 @@
 </head>
 
 <body >
-	<div id="desktop" class="k-content">
+	<div id="desktop" class="k-content non_selectable">
     	<?= $this->load->view("partials/events"); ?>
     	<?= $this->load->view("partials/create_event"); ?>
+    	<?= $this->load->view('file_uploader'); ?>
 		<div id="desktop">
-			<div class='icon draggable'> </div>
+		
 			<div id="selection_box"></div>
 			<?php
-				$currentTop=10;
-				for($i = 0; $i < 5; $i++) {
-					echo '<div class="icon draggable" style="top:'.$currentTop.'px; left: 10px;"> </div>'; 
-					$currentTop += 70;
+			
+				foreach ($positions as $icon) {
+					if(!strcasecmp($icon->name, 'uploader')){
+						echo '<div style="top:'.$icon->top.'px;  left:'.$icon->left.'px;" class="draggable"><a href="javascript:;" id='.$icon->name.' class="icon uploader file_uploader" style="top:'.$icon->top.'px; left:'.$icon->left.'px;"></a><p>'. $icon->name.'</p></div>'; 
+						// echo '<a href="javascript:;" id='.$icon->name.' class="icon draggable file_uploader" style="top:'.$icon->top.'px; left:'.$icon->left.'px;"></a>'; 
+					}
+					else{
+						$type=explode ('.',$icon->name);
+						$iconType='';
+						switch ($type[1]) {
+							case 'pdf':
+									$iconType='pdf';
+								break;
+							case 'rar':
+									$iconType='rar';
+								break;
+
+							case 'zip':
+								$iconType='rar';
+							break;
+
+							case 'png':
+								$iconType='picture';
+							break;
+
+							case 'jpg':
+								$iconType='picture';
+							break;
+
+							case 'gif':
+								$iconType='picture';
+							break;
+
+							case 'bmp':
+								$iconType='picture';
+							break;
+
+							case 'xls':
+								$iconType='excel';
+							break;
+
+
+							default:
+								$iconType='unknown';
+								break;
+						}	
+						echo '<div style="top:'.$icon->top.'px;  left:'.$icon->left.'px;" class="draggable"><a href='. $this->config->item('base_url').  '/application/resources/images/'.$icon->name.' " id='.$icon->name.' 
+							class="icon '.$iconType.'" ></a><p>'. $icon->name.'</p></div>'; 
+		
+					}				
 				}
-			?>
+
+
+			?>	
+			
 			<div id="startMenu" style='display: none'>
-				<button id="fullscrnBtn" class="menubtn">Toggle Fullscreen</button>
+				<!-- <button id="fullscrnBtn" class="menubtn">Toggle Fullscreen</button>
 				<button id="marketBtn" class="menubtn">Market</button>
-				<button id="fileSysBtn" class="menubtn">File System</button>
-				<a href="logout.php">
-					<button id="logoutBtn" class="menubtn">Logout</button>
+				<button id="fileSysBtn" class="menubtn">File System</button> -->
+				<a href="javascript:;" id="uploader1">
+					<button id="logoutBtn" class="menubtn">Upload File</button>
 				</a>
 				<!-- <a href="http://www.noviizbori2013.com" target="_blank">
 					<img src="http://noviizbori2013.com/images/resignation-button-bg.png" alt="Поискай оставка!" style="margin-left:10px;margin-top:50px" width="180" height="45" />
