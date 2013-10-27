@@ -223,10 +223,9 @@ html,body
 }
 .icon
 {
-	width: 32px;
-	height: 32px;
-	position: absolute;
+	display:inline-block;
 }
+
 #toolbar #taskbar
 {
 
@@ -258,7 +257,7 @@ html,body
 	padding-bottom: 40px;
 	margin-top: 189px;
 	position: fixed;
-	z-index: 1500;
+	z-index: 999999;
 	width: 200px;
 	min-height: 400px;
 	float:left;
@@ -342,7 +341,6 @@ html,body
 {
 	width: 50px;
 	height: 50px;
-	background-color: red;
 }
 
 .ui-draggable-dragging 
@@ -370,4 +368,62 @@ html,body
 .selected
 {
 	background-color: yellow;
+}
+
+.non_selectable{ 
+    -moz-user-select: none;
+   -webkit-user-select: none;
+    cursor:normal;
+}
+#file_uploader{
+	background-color: rgb(150,150,235);
+	z-index: 99999;
+	width: 500px;
+	height: 100px;
+	position: absolute;
+	left: 500px;
+	top: 300px;
+	display: none;
+}
+
+.unknown{
+
+	background-image: url('http://localhost/hackaton/trunk//application/resources/images/icons/unknown.png');
+	background-position: 1px, 2px;
+}
+.rar{
+
+	background-image: url('http://localhost/hackaton/trunk//application/resources/images/icons/rar.png');
+	background-position: 1px, 2px;
+}
+.pdf{
+	
+	background-image: url('http://localhost/hackaton/trunk//application/resources/images/icons/pdf.png');
+	background-position: 1px, 2px;	
+}
+.picture{
+	
+	background-image: url('http://localhost/hackaton/trunk//application/resources/images/icons/picture.png');
+	background-position: 2px 2px;	
+}
+.excel{
+	
+	background-image: url('http://localhost/hackaton/trunk//application/resources/images/icons/pdf.png');
+	/*background-position: 1px 2px;	*/
+}
+
+.uploader{
+	
+	background-image: url('http://localhost/hackaton/trunk//application/resources/images/icons/uploader.png');
+	/*background-position: 1px 2px;	*/
+}
+
+.draggable p{
+	overflow: hidden;
+	margin: 0;
+	color: red;
+}
+.draggable {
+	width: 70px;
+	height: 70px;
 }
