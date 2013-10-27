@@ -4,7 +4,7 @@
     padding: 47px 0 0 0;
     background: url('../../content/web/panelbar/orgHead.png') transparent no-repeat 0 0;
     position: absolute;
-    right: 0;
+    right: 20px;
 }
 #bottom {
     width: 300px;
@@ -156,4 +156,9 @@ span.k-tooltip {
 
 #stream-header span {
     width: 100%;
+}
+
+.disable-add {
+    text-decoration: none;
+    colro: gray;
 }

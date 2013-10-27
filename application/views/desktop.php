@@ -21,6 +21,7 @@
 
 <body >
 	<div id="desktop" class="k-content non_selectable">
+		<div id="twitch" class="draggable"></div>
     	<?= $this->load->view("partials/events"); ?>
     	<?= $this->load->view("partials/create_event"); ?>
     	<?= $this->load->view('file_uploader'); ?>

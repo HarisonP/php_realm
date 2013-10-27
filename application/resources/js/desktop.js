@@ -304,8 +304,9 @@ $(document).ready(function() {
     	var newEvent = new_event_html($("#description_option").val(),
     		$("#comment_option").val(), $("#location_option").val());
     	liveNow.append(newEvent);
-    	$("#player")[0].src = $("#stream_option").val();
+    	//$("#player")[0].src = $("#stream_option").val();
     	$(".k-i-close").click();
+    	$("#my-events a").addClass("disable-add");
     });
 
     $("#create_advanced input").click(function(ev) {
@@ -313,7 +314,15 @@ $(document).ready(function() {
     	return false;
     });
 
+    $("#live-now").click(function() {
+    	dispaly_stream();
+    });
 });
+
+function dispaly_stream() {
+    $("#twitch").append(stream_twitch());
+    $("#stream-header span").width("100%");
+}
 
 
 
@@ -329,4 +338,15 @@ function new_event_html(name, comment, location) {
                             '</span></li>\
                         </ul>\
                     </li>';
+}
+
+function stream_twitch() {
+	return '<p id="stream-header" class="k-item k-state-disabled k-first" role="menuitem" aria-disabled="true">\
+            <span class="k-link k-header" style="font-size: 16px; height: 35px; width: 90%; display: inline-block;">Stream</span>\
+        </p>\
+        <div>\
+            <iframe id="player" type="text/html" width="760" height="478"\
+              src="http://www.twitch.tv/wtfsoil"\
+              frameborder="0"></iframe>\
+    	</div>';
 }

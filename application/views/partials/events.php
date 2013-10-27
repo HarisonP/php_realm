@@ -1,13 +1,4 @@
-    <div id="twitch" class="draggable">
-        <p id="stream-header" class="k-item k-state-disabled k-first" role="menuitem" aria-disabled="true">
-            <span class="k-link k-header" style="font-size: 16px; height: 35px; width: 90%; display: inline-block;">Stream</span>
-        </p>
-        <div>
-            <iframe id="player" type="text/html" width="760" height="478"
-              src="http://www.twitch.tv/wtfsoil"
-              frameborder="0"></iframe>
-        </div>
-    </div>
+    
 
     <div id="organizer" class="draggable">
         <ul id="panelbar">

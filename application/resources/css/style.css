@@ -388,33 +388,33 @@ html,body
 
 .unknown{
 
-	background-image: url('http://localhost/hackaton/trunk//application/resources/images/icons/unknown.png');
+	background-image: url('http://localhost/hackaton/application/resources/images/icons/unknown.png');
 	background-position: 1px, 2px;
 }
 .rar{
 
-	background-image: url('http://localhost/hackaton/trunk//application/resources/images/icons/rar.png');
+	background-image: url('http://localhost/hackaton/application/resources/images/icons/rar.png');
 	background-position: 1px, 2px;
 }
 .pdf{
 	
-	background-image: url('http://localhost/hackaton/trunk//application/resources/images/icons/pdf.png');
+	background-image: url('http://localhost/hackaton/application/resources/images/icons/pdf.png');
 	background-position: 1px, 2px;	
 }
 .picture{
 	
-	background-image: url('http://localhost/hackaton/trunk//application/resources/images/icons/picture.png');
+	background-image: url('http://localhost/hackaton/application/resources/images/icons/picture.png');
 	background-position: 2px 2px;	
 }
 .excel{
 	
-	background-image: url('http://localhost/hackaton/trunk//application/resources/images/icons/pdf.png');
+	background-image: url('http://localhost/hackaton/application/resources/images/icons/pdf.png');
 	/*background-position: 1px 2px;	*/
 }
 
 .uploader{
 	
-	background-image: url('http://localhost/hackaton/trunk//application/resources/images/icons/uploader.png');
+	background-image: url('http://localhost/hackaton/application/resources/images/icons/uploader.png');
 	/*background-position: 1px 2px;	*/
 }
 
