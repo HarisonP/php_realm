@@ -3,12 +3,44 @@ $(document).ready(function(){
 	dragging.init();
 	dragableSelect.init();
 	startTime();
+	specialIconsEvent.fileUploader();
+	closers.init();
 });	
+	var specialIconsEvent = new function(){
+		var self = this;
+		self.fileUploader = function(){
+			$('#uploader').click(function(e){
+				e.preventDefault();
+				$(this).addClass('selected')
+			});
+			$('#uploader').dblclick(function(e){
+				e.preventDefault();
+				$('#file_uploader').fadeIn();	
+				$(this).removeClass('selected')
+			});
+			$('#uploader1').click(function(e){
+				e.preventDefault();
+				$('#file_uploader').fadeIn();
+			});
+
+
+		}
+	}
+
+	var closers= new function(){
+		this.init = function(){
+			$('#closer').click(function() {
+				$('#file_uploader').fadeOut();
+				
+			});
+		}
+	}
 
 	var startBtnEvents = new function() {
 		var self = this;
 		self.init = function() {
 			$('#startBtn').click(function()	{
+				console.log(1);
 				$('#startMenu').fadeToggle();
 			});
 			self.close();
@@ -20,9 +52,10 @@ $(document).ready(function(){
 				}
 			});
 			$('#desktop').mousedown(function (){				
-				$('div .selected').removeClass('selected');
+				$('.selected').removeClass('selected');
 			});
 		}
+
 	}
 
 	var dragging = new function() {
@@ -92,7 +125,7 @@ $(document).ready(function(){
 	            if(!box){
 	                return;
 		        }
-		    $('div .icon:visible').each(function() { 
+		    $('.icon:visible').each(function() { 
 		    	self.allIcons.push(this);
 		    });
 		    self.allIcons=$(self.allIcons);
@@ -194,7 +227,7 @@ function startTime()
 		// add a zero in front of numbers<10
 		m=checkTime(m);
 		s=checkTime(s);
-		$('#datetime').text(h + ":"+ m + ' | ' + day + '.' + mounth +'.' + year);
+		$('#datetime').text(h + ":"+ m + ' | ' + '27' + '.' + parseInt(mounth + 1) +'.' + year);
 		t=setTimeout(function(){startTime()},500);
 	}
 
