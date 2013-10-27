@@ -156,10 +156,9 @@ $(document).ready(function(){
 	        box.style.display = "none";
 	        box.style.width = "0";
 	        box.style.height = "0";
-	        
+	        console.log(1);
 	        self.allCardsPosition={};
 	        self.allCards=[];
-	        $('body').removeClass('non_selectable');
 	        
 	        $(document).off('mousemove', self.mousemove);
 	        $(document).off('mouseup', self.mouseup);
