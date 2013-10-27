@@ -21,6 +21,9 @@ class Desktop extends CI_Controller {
 	{
 	
 		$data['base_url']=$this->config->item('base_url');
+		$this->load->model('model_icons');
+		$data['positions'] = $this->model_icons->getPositons();
+		$data['base_url'] = $this->config->item('base_url');
 		$this->load->view('desktop.php',$data);
 	}
 }
