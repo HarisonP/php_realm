@@ -212,5 +212,44 @@ $(document).ready(function() {
         expandMode: "single"
     });
 
-    $("#panelbar").children("li").children("span.k-link").css({ "font-size":"14px", "height":"50px", "width":"100%", "display":"inline-block" })
+    $("#panelbar").children("li").children("span.k-link").css({ "font-size":"16px", "height":"35px", "width":"90%", "display":"inline-block" })
+});
+
+$(document).ready(function() {
+    var window = $("#create-event"),
+        undo = $("#undo")
+                .bind("click", function() {
+                    window.data("kendoWindow").open();
+                    undo.hide();
+                });
+
+    var onClose = function() {
+        undo.show();
+    }
+
+    if (!window.data("kendoWindow")) {
+        window.kendoWindow({
+            width: "300px",
+            height: "150px",
+            appendTo: "#desktop",
+            position: {
+            	top: 100,
+            	left: 200
+            },
+            title: "Start event",
+            actions: [
+                "Pin",
+                "Minimize",
+                "Maximize",
+                "Close"
+            ],
+            close: onClose
+        });
+    }
+    $("#create-event").parent().hide();
+
+    $("#my-events").click(function(){
+    	$("#create-event").parent().show();
+    });
+
 });

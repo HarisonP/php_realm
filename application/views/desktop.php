@@ -6,8 +6,7 @@
 
 	<link rel="stylesheet" type="text/css" href=<?php echo '"'.$this->config->item('base_url').'application/resources/css/style.css'.'"' ?>>
 	<link rel="stylesheet" type="text/css" href=<?php echo '"'.$base_url.'application/resources/css/events.css'.'"' ?>>
-	<!-- // <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script> -->
-	
+	<link rel="stylesheet" type="text/css" href=<?php echo '"'.$base_url.'application/resources/css/window.css'.'"' ?>>	
 
 	<link rel="stylesheet" type="text/css" href=<?= '"'.$base_url.'\application\resources\lib\styles\kendo.common.min.css'.'"' ?>>
 	<link rel="stylesheet" type="text/css" href=<?= '"'.$base_url.'\application\resources\lib\styles\kendo.default.min.css'.'"' ?>>
@@ -21,8 +20,9 @@
 </head>
 
 <body >
-		<div id="desktop" class="k-content">
+	<div id="desktop" class="k-content">
     	<?= $this->load->view("partials/events"); ?>
+    	<?= $this->load->view("partials/create_event"); ?>
 		<div id="desktop">
 			<div class='icon draggable'> </div>
 			<div id="selection_box"></div>
