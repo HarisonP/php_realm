@@ -229,7 +229,7 @@ $(document).ready(function() {
     if (!window.data("kendoWindow")) {
         window.kendoWindow({
             width: "300px",
-            height: "150px",
+            height: "235px",
             appendTo: "#desktop",
             position: {
             	top: 100,
@@ -248,7 +248,52 @@ $(document).ready(function() {
     $("#create-event").parent().hide();
 
     $("#my-events").click(function(){
-    	$("#create-event").parent().show();
+    	if(!$("#create-event").is(":visible")) {
+    		$("#undo").click();
+    		$("#create-event").parent().show();
+    	} else {
+    		$("#create-event").parent().hide();
+    		$(".k-i-close").click();
+
+    	}
+    });
+
+    $("#create_advanced").click(function(){
+    	if(!$("#create_advanced div").is(":visible")) {
+    		$("#create_advanced div").show();
+    	} else {
+    		$("#create_advanced div").hide();
+    	}
+    });
+
+    $("#create-event a.buged").click(function(ev){
+    	var liveNow = $("#live-now > ul");
+    	var newEvent = new_event_html($("#description_option").val(),
+    		$("#comment_option").val(), $("#location_option").val());
+    	liveNow.append(newEvent);
+    	$("#player")[0].src = $("#stream_option").val();
+    	$(".k-i-close").click();
+    });
+
+    $("#create_advanced input").click(function(ev) {
+    	ev.stopPropagation();
+    	return false;
     });
 
 });
+
+
+
+function new_event_html(name, comment, location) {
+	return '<li aria-expanded="true" class="k-item k-first k-last k-state-active" role="menuitem" aria-selected="true" id="panelbar_pb_active" aria-hidden="false"><span class="k-link k-state-selected k-state-focused">' + name +  
+                        '<span class="event-elapsed"> Elapsed: 0 hours </span><span class="k-icon k-i-arrow-n k-panelbar-collapse"></span></span>\
+                        <ul class="k-group k-panel" role="group" aria-hidden="true" style="display: block; height: auto; overflow: visible;">\
+                            <li class="k-item k-state-default k-first" role="menuitem"><span class="k-link">Location: ' +
+                               location +
+                            '</span></li>Comments' + 
+                            '<li class="k-item k-state-default k-last" role="menuitem"><span class="k-link"> ' +
+                                comment +
+                            '</span></li>\
+                        </ul>\
+                    </li>';
+}

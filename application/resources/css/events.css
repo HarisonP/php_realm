@@ -117,6 +117,43 @@ label {
 .invalid {
     color: red;
 }
+
 span.k-tooltip {
     margin-left: 6px;
+}
+
+#create_advanced{
+    text-decoration: underline;
+    color: #067db7;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#event_fields {
+    margin-bottom: 0;
+}
+
+.buged {
+    margin-top:30px;
+}
+
+#stream-header {
+    width: 409px;
+}
+
+#twitch > div {
+    width: 409px;
+    height: 317px;
+    overflow: hidden;
+}
+
+#twitch > div  iframe{
+    margin-left: -175px;
+    margin-top: -106px;
+}
+
+#stream-header span {
+    width: 100%;
 }
